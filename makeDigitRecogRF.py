@@ -4,7 +4,6 @@ Created on 18 Feb 2014
 @author: Dessy Amirudin
 '''
 #import pandas as pd
-#from sklearn.ensemble import RandomForestClassifier
 
 from sklearn import svm
 import csv
