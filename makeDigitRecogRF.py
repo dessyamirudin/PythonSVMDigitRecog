@@ -1,7 +1,7 @@
 '''
-Created on 11 Dec 2013
+Created on 18 Feb 2014
 
-@author: TOSHIBA
+@author: Dessy Amirudin
 '''
 #import pandas as pd
 #from sklearn.ensemble import RandomForestClassifier
@@ -45,8 +45,5 @@ def main():
     with open('submission.csv','w') as filesubmit:
         for line in result:filesubmit.write(",".join(line)+"\n")
         
-       
-    # create and train the random forest
-    # n_jobs set to -1 will use the number of cores present on your system.
 if __name__ == "__main__":
     main()
