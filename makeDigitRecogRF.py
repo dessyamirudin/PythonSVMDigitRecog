@@ -3,7 +3,6 @@ Created on 18 Feb 2014
 
 @author: Dessy Amirudin
 '''
-#import pandas as pd
 
 from sklearn import svm
 import csv
@@ -39,12 +38,18 @@ def main():
     #check the test
     result=clf.predict(testdata)
     
+    #change the result from float to integer
+    intresult=[]
+    for line in result:
+        intresult.append(int(line))
+        
+    print(intresult)
     #write the file
     print('writing')
     with open('submission.csv','w') as filesubmit:
-        for line in result:filesubmit.write(",".join(line)+"\n")
-    
-    print('end')
+        for line in intresult:filesubmit.write(",".join(str(line))+"\n")
         
+    print('end')
+    
 if __name__ == "__main__":
     main()
