@@ -43,6 +43,8 @@ def main():
     print('writing')
     with open('submission.csv','w') as filesubmit:
         for line in result:filesubmit.write(",".join(line)+"\n")
+    
+    print('end')
         
 if __name__ == "__main__":
     main()
